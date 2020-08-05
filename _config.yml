@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark"  # 테마 색 설정 "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dirt"  # 테마 색 설정 "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"  # 'en-US', 'ko-KR'
@@ -100,7 +100,7 @@ analytics:
 author:
   name             : "Dongle Seo."
   avatar           : "/assets/images/self.png"  # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person. And I can't change theme. what's going on?"
+  bio              : "AI. Object Detection. Jetson Platform. TensorRT.<br> <br>Today is best day in my life"
   location         : "Seoul, Republic of Korea."
   email            : "sdy1029@gmail.com"
   links:
@@ -278,7 +278,7 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: "_post"
+      path: ""
       type: posts
     values:
       layout: single
