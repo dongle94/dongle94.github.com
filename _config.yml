@@ -12,13 +12,13 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "aqua"  # 테마 색 설정 "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dirt"  # 테마 색 설정 "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"  # 'en-US', 'ko-KR'
 title                    : "Dongle's 개발노트"  # Meta 태그에 들어가는 영역, masthead_title 등이 없으면 기본값으로 출력
 title_separator          : "-"  # 타이틀 사이의 구분자
-subtitle                 : "Open"  # site tagline that appears below site title in masthead 타이틀 아래에 출력
+subtitle                 : "Preparing"  # site tagline that appears below site title in masthead 타이틀 아래에 출력
 name                     : "Dongle Seo"  # 페이지 최 하단에 찍히는 카피라이트 내용
 description              : "An amazing website."
 url                      : "https://dongle94.github.io/"  # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -101,12 +101,12 @@ author:
   name             : "Dongle Seo."
   avatar           : "/assets/images/self.png"  # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **amazing** person."
-  location         : "Seoul, KOREA(ROK)"
+  location         : "Seoul, Republic of Korea."
   email            : "sdy1029@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      # url: "mailto:sdy1029@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -126,6 +126,9 @@ author:
 # Site Footer
 footer:
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:sdy1029@gmail.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url:
@@ -134,7 +137,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/dongle94"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -143,7 +146,7 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "https://instagram.com/dong_yooooon"
 
 
 # Reading Files
@@ -275,12 +278,20 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "_post"
       type: posts
     values:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
+
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
