@@ -1,5 +1,6 @@
 ---
 title: "[TensorFlow 2] Object Detection API training 2"
+date: 2020-09-19
 categories:
   - TensorFlow 2
 tags:
@@ -8,6 +9,10 @@ tags:
   - Object Detection
   - Training
   - TF API
+toc: true
+toc_sticky: true
+toc_label: "On this page"  # basic is 'On this page'
+toc_icon: "smile"
 ---
 
 해당 포스팅은 앞선 1편에 이어 TensorFlow 2 MODEL API를 통한 Efficient Net Training 방법을 다룬다.
@@ -24,14 +29,14 @@ tags:
 학습할 모델이 저장될 폴더도 `train` 안에 하나 만들고 `model_zoo`에  Efficientdet d0 디렉토리 안에 있는 `pipeline.config` 파일도 복사해서
 안에 넣어준다. 여기서는 `tensorflow/train/effidet_d0`를 만들고 `model_zoo/tf2/efficientdet_d0_coco17_tpu-32` 디렉토리 아래에 있던
 `pipeline.config`를 복사해서 가져왔다.
-```shell script
+```shell
 $ mkdir -p train/effidet_d0 
 $ cp model_zoo/tf2/efficientdet_d0_cooo17_tpu-32/pipeline.config ./train/effidet_d0/
 ```
 <br>
 
 여기까지 되었다면 디렉토리 구조는 아래와 같다.
-```shell script
+```shell
 tensorflow
 ├─ data/
 │  └─ ...
@@ -73,7 +78,7 @@ tensorflow
 ## 네트워크 모델 학습(Training) 
 TensorFlow 2에서의 Object Detection API를 통한 네트워크 모델 학습은 `models/research/object_detection/model_main_tf2.py`를
  통해서 한다. 실행 명령어는 아래와 같다.
-```
+```shell
 $ cd ~/tensorflow/models/research/object_detection
 
 $ export PYTHONPATH=/data/tensorflow/models/research:/data/tensorflow/models/research/slim
@@ -107,7 +112,7 @@ $ CUDA_VISIBLE_DEVICES=0 python object_detection/model_main_tf2.py \
 `models` 리포지토리는 학습 중인 모델의 Evaluation 기능을 제공한다. 학습 중에 **체크포인트 생성 시**에 해당 체크포인트를 검증하는 작업이기 때문에 
 모델 학습과 **동시**에 Evaluation을 돌려주는 것이 좋다. 체크포인트가 생길 때마다 Evaluation Data를 이용하여 loss, mAP 수치 등을 확인할
  수 있다. 사용하는 모듈은 같으나 파라미터가 다름에 유의한다. 아래와 같은 커맨드로 실행한다.
-```shell script
+```shell
 CUDA_VISIBLE_DEVICES="" python object_detection/model_main_tf2.py \
 --pipeline_config_path=path/to/tensorflow/train/effidet_d0/pipeline.config \
 --model_dir=path/to/tensorflow/train/effidet_d0 \

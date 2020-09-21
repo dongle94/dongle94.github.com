@@ -1,11 +1,16 @@
 ---
 title: "[Ubuntu] 원격 User 생성/수정/삭제"
+date: 2020-08-30
 categories:
   - Ubuntu
 tags:
   - Ubuntu
   - User
   - Remote
+toc: true
+toc_sticky: true
+toc_label: "On this page"  # basic is 'On this page'
+toc_icon: "smile"
 ---
 
 해당 글은 아래 링크를 참조하였습니다.  

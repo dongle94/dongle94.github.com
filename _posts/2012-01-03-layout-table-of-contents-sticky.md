@@ -4,14 +4,18 @@ tags:
   - table of contents
 toc: true
 toc_sticky: true
+toc_label: "Unique Title"
+toc_icon: "heart"
 ---
 
 "Stick" table of contents to the top of a page by adding `toc_sticky: true` to its YAML Front Matter.
 
 ```yaml
 ---
-toc: true
+toc: true   
 toc_sticky: true
+toc_label: "Unique Title"
+toc_icon: "heart"  # corresponding Font Awesome icon name (without fa prefix)
 ---
 ```
 
