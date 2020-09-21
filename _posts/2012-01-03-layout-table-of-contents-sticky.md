@@ -2,7 +2,6 @@
 title: "Layout: Post with Sticky Table of Contents"
 tags:
   - table of contents
-classes: wide
 toc: true
 toc_sticky: true
 toc_label: "Unique Title"

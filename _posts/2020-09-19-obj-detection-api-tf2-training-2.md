@@ -9,7 +9,6 @@ tags:
   - Object Detection
   - Training
   - TF API
-classes: wide
 toc: true
 toc_sticky: true
 toc_label: "On this page"  # basic is 'On this page'
