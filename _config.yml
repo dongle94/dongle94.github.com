@@ -100,7 +100,7 @@ analytics:
 author:
   name             : "Dongle Seo."
   avatar           : "/assets/images/profile.png"  # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "AI. Object Detection. Jetson Platform. TensorRT.<br> <br>Today is best day in my life"
+  bio              : "AI. Object Detection. <br>Jetson Platform. <br>TensorFlow. <br>TensorRT.<br>"
   location         : "Seoul, Republic of Korea."
   email            : "sdy1029@gmail.com"
   links:
