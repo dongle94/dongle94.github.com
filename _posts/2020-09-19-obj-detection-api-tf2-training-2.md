@@ -46,7 +46,8 @@ tensorflow
 ├─ model_zoo/
 │  └─ ...
 └─ train/
-   └─ pipeline.config     
+   └─ effidet_d0
+      └─ pipeline.config     
 ```
 <br>
 
@@ -84,7 +85,7 @@ $ cd ~/tensorflow/models/research/object_detection
 
 $ export PYTHONPATH=/data/tensorflow/models/research:/data/tensorflow/models/research/slim
 
-$ CUDA_VISIBLE_DEVICES=0 python object_detection/model_main_tf2.py \
+$ CUDA_VISIBLE_DEVICES=0 python model_main_tf2.py \
 --pipeline_config_path=path/to/tensorflow/train/effidet_d0/pipeline.config \
 --model_dir=path/to/tensorflow/train/effidet_d0 \
 --checkpoint_every_n = 5000 \
@@ -114,7 +115,7 @@ $ CUDA_VISIBLE_DEVICES=0 python object_detection/model_main_tf2.py \
 모델 학습과 **동시**에 Evaluation을 돌려주는 것이 좋다. 체크포인트가 생길 때마다 Evaluation Data를 이용하여 loss, mAP 수치 등을 확인할
  수 있다. 사용하는 모듈은 같으나 파라미터가 다름에 유의한다. 아래와 같은 커맨드로 실행한다.
 ```shell
-CUDA_VISIBLE_DEVICES="" python object_detection/model_main_tf2.py \
+CUDA_VISIBLE_DEVICES="" python model_main_tf2.py \
 --pipeline_config_path=path/to/tensorflow/train/effidet_d0/pipeline.config \
 --model_dir=path/to/tensorflow/train/effidet_d0 \
 --checkpoint_dir=path/to/tensorflow/train/effidet_d0 \
@@ -141,4 +142,6 @@ $ CUDA_VISIBLE_DEVICES=0 nohup python object_detection/model_main_tf2.py \
 기존 train 코드 실행 커맨드에 비해 첫 줄과 마지막 줄에 추가된 내용이 있다. 
 - `python` 프로세스를 실행 시키기 전에 `nohup` 커맨드를 추가 시킴으로써 터미널을 종료해도 계속 프로세스는 실행되고 있게 할 수 있다.
 - 마지막 줄에 `> train.log &` 는 `train.log` 라는 파일을 만들어 터미널의 실행 결과를 텍스트로 저장하고 `&` 마크를 붙여야 백그라운드로 실행한다.
+
+Evaulation도 마찬가지로 `CUDA_VISIBLE_DEVICES=""` 다음에 `nohup`을 마지막 줄에 `> eval.log &` 와 같은 방식으로 추가하면 된다. 
 
