@@ -9,6 +9,7 @@ tags:
   - Object Detection
   - Training
   - TF API
+classes: wide
 toc: true
 toc_sticky: true
 toc_label: "On this page"  # basic is 'On this page'
@@ -126,5 +127,18 @@ CUDA_VISIBLE_DEVICES="" python object_detection/model_main_tf2.py \
   과정임을 코드가 인지한다. 학습이 진행됨에 따라 새로운 체크포인트가 생기고, 새로운 체크포인트가 생길 때마다 Evaluation 과정을 거친다.
   `--sample_1_of_n_eval_examples` 파라미터를 1로 주면 1분의 1. 즉, 전체 Evaluation 데이터셋을 전부 확인한다. 예를 들어 값을 5로 준다면
   Evaluation Set의 5분의 1. 즉, 20%만 이용한다.
-
+  
+## `nohup` 이용해서 백그라운드로 실행
+`nohup` 커맨드를 이용하면 지금 활성화 되어있는 터미널 창과 관련없이 백그라운드에서 프로그램을 실행 할 수 있다. 위의 train 커맨드를 기반으로 수정된
+실행 커맨드는 아래와 같다.
+```shell
+$ CUDA_VISIBLE_DEVICES=0 nohup python object_detection/model_main_tf2.py \
+--pipeline_config_path=path/to/tensorflow/train/effidet_d0/pipeline.config \
+--model_dir=path/to/tensorflow/train/effidet_d0 \
+--checkpoint_every_n = 5000 \
+--alsologtostderr > train.log & 
+```
+기존 train 코드 실행 커맨드에 비해 첫 줄과 마지막 줄에 추가된 내용이 있다. 
+- `python` 프로세스를 실행 시키기 전에 `nohup` 커맨드를 추가 시킴으로써 터미널을 종료해도 계속 프로세스는 실행되고 있게 할 수 있다.
+- 마지막 줄에 `> train.log &` 는 `train.log` 라는 파일을 만들어 터미널의 실행 결과를 텍스트로 저장하고 `&` 마크를 붙여야 백그라운드로 실행한다.
 
