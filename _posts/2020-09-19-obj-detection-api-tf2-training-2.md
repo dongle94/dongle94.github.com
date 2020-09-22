@@ -142,5 +142,4 @@ $ CUDA_VISIBLE_DEVICES=0 nohup python object_detection/model_main_tf2.py \
 - `python` 프로세스를 실행 시키기 전에 `nohup` 커맨드를 추가 시킴으로써 터미널을 종료해도 계속 프로세스는 실행되고 있게 할 수 있다.
 - 마지막 줄에 `> train.log &` 는 `train.log` 라는 파일을 만들어 터미널의 실행 결과를 텍스트로 저장하고 `&` 마크를 붙여야 백그라운드로 실행한다.
 
-Evaulation도 마찬가지로 `CUDA_VISIBLE_DEVICES=""` 다음에 `nohup`을 넣어주고 ,마지막 줄에 `> eval.log &` 와 같은 방식으로 추가하면 된다. 
-
+Evaulation도 마찬가지로 `CUDA_VISIBLE_DEVICES=""` 다음에 `nohup`을 넣어주고, 마지막 줄에 `> eval.log &` 내용을 추가 함으로써 적용할 수 있다.
