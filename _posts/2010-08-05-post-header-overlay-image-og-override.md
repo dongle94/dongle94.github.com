@@ -28,3 +28,10 @@ header:
     - label: "Learn more"
       url: "https://unsplash.com"
 ```
+
+그냥 제목텍스트를 오버레이 시키지 않은 채 헤더 이미지만 주려면 아래와 같이 적는다.
+```yaml
+header:
+  image: /assets/images/page-header-image.png
+  og_image: /assets/images/page-header-og-image.png
+```
