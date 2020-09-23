@@ -1,5 +1,6 @@
 ---
 title: "Edge Case: Nested and Mixed Lists"
+last_modified_at: 2016-03-09T16:20:02-05:00
 categories:
   - Edge Case
 tags:
@@ -8,6 +9,7 @@ tags:
   - edge case
   - lists
   - markup
+  - modify date
 ---
 
 Nested and mixed lists are an interesting beast. It's a corner case to make sure that
