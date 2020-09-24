@@ -1,5 +1,5 @@
 ---
-title: "Layout: Post with Sticky Table of Contents"
+title: "Layout: Post with Sticky Table of Contents, Control icon & label"
 tags:
   - table of contents
 toc: true
@@ -14,8 +14,8 @@ toc_icon: "heart"
 ---
 toc: true   
 toc_sticky: true
-toc_label: "Unique Title"
-toc_icon: "heart"  # corresponding Font Awesome icon name (without fa prefix)
+toc_label: "Unique Title"  # 목차 테이블 라벨,
+toc_icon: "heart"  # 목차테이블 아이콘, corresponding Font Awesome icon name (without fa prefix)
 ---
 ```
 

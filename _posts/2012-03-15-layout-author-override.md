@@ -1,7 +1,7 @@
 ---
-title: "Layout: Author Override"
+title: "Layout: Author Override & Profile disabled"
 author: Billy Rick
-excerpt: "A post to test author overrides using a data file."
+excerpt: "A post to test author overrides using a data file and disabled profile"
 last_modified_at: 2018-09-10T12:32:27-04:00
 ---
 
@@ -49,3 +49,10 @@ Example: To assign `Billy Rick` as an author for a post the following YAML Front
 ```yaml
 author: Billy Rick
 ```
+
+또한 작가 프로필 출력 기능을 On/Off 할 수도 있습니다. 포스팅의 meta 정보에서 다음과 같이 작성합니다.
+기본값은 `_config.yml` 에서 조정 가능하다. 현재 기본값은 `true`, 게시글은 `author: Billy Rick`을 적용하며 따로 적지 않았습니다.   
+기본으로 설정되어 있는 옵션이 먼저 적용되고 포스팅 meta에 들어가있는 옵션이 덮어 씌워져서 적용됩니다.
+```yaml
+author_profile: false
+``` 

@@ -1,5 +1,5 @@
 ---
-title: "Layout: Excerpt (Generated)"
+title: "Layout: Excerpt (Separator, Script)"
 excerpt_separator: "<!--more-->"
 categories:
   - Layout
