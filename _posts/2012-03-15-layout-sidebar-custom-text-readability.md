@@ -1,12 +1,39 @@
 ---
-title: "Wide Single Layout Page"
+title: "Layout: Sidebar Custom, Wide page"
 classes: wide
-excerpt: "A page with `classes: wide` set to expand the main content's width."
+excerpt: "A post with custom sidebar content. A page with `classes: wide` set to expand the main content's width."
+
+author_profile: false
+sidebar:
+  - title: "Title"
+    image: http://placehold.it/350x250
+    image_alt: "image"
+    text: "Some text here."
+  - title: "Another Title"
+    text: "More text here."
+    nav: sidebar-sample
+    
 tags: 
   - sample post
   - readability
   - test
 ---
+
+This post has a custom sidebar set in the post's YAML Front Matter.
+
+An example of how that YAML could look is:
+
+```yaml
+sidebar:
+  - title: "Title"
+    image: http://placehold.it/350x250
+    image_alt: "image"
+    text: "Some text here."
+  - title: "Another Title"
+    text: "More text here."
+    nav: sidebar-sample
+```
+
 
 When using `layout: single` add the following front matter to a page or post to widen the main content:
 
