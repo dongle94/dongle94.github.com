@@ -2,12 +2,13 @@
 title: "Layout: Excerpt (Separator, Script)"
 excerpt_separator: "<!--more-->"
 categories:
-  - Layout
-  - Uncategorized
+  - Manual
 tags:
   - content
   - excerpt
   - layout
+comments: false
+hidden: true
 ---
 
 해당 내용은 보여지는 부분입니다. excerpt_separator 를 이용하여 게시글 미리보기에서 보여지는 부분을 조정할 수 있습니다.

@@ -1,10 +1,12 @@
 ---
 title: "Post: Video (YouTube) / Image (with Link, Caption)"
 categories:
-  - Post Formats
+  - Manual
 tags:
   - image
   - Post Formats
+comments: false
+hidden: true
 ---
 
 YouTube video embed below.  

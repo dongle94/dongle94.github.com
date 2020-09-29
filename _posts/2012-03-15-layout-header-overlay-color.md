@@ -8,12 +8,13 @@ header:
     - label: "Learn more"
       url: "https://unsplash.com"
 categories:
-  - Layout
-  - Uncategorized
+  - Manual
 tags:
   - edge case
   - image
   - layout
+comments: false
+hidden: true
 ---
 
 This post should display a **header with a solid background color**, if the theme supports it.

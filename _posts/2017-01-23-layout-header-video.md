@@ -5,11 +5,12 @@ header:
     id: XsxDH4HcOWA
     provider: youtube
 categories:
-  - Layout
-  - Uncategorized
+  - Manual
 tags:
   - video
   - layout
+comments: false
+hidden: true
 ---
 
 This post should display a **header with a responsive video**, if the theme supports it.

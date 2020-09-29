@@ -1,14 +1,15 @@
 ---
 title: "Markup: Title *with* **Markdown**, Alignment"
 categories:
-  - Markdown
-  - Markup
+  - Manual
 tags:
   - css
   - html
   - title
   - Markup
   - Markdown
+comments: false
+hidden: true
 ---
 
 Verify that:

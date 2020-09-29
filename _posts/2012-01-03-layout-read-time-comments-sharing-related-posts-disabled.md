@@ -5,14 +5,14 @@ comments: false
 share: false
 related: false
 categories:
-  - Layout
-  - Uncategorized
+  - Manual
 tags:
   - related posts
   - social
   - comments
   - layout
   - read time
+hidden: true
 ---
 
 This post has reading time, comments, social sharing links, and related posts disabled.

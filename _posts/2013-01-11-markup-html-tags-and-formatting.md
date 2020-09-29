@@ -3,7 +3,7 @@ title: "Markup: HTML Tags and Formatting"
 header:
   teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
 categories:
-  - Markup
+  - Manual
 tags:
   - content
   - css
@@ -11,6 +11,8 @@ tags:
   - html
   - markup
 toc: true
+comments: false
+hidden: true
 ---
 
 A variety of common markup showing how the theme styles them.

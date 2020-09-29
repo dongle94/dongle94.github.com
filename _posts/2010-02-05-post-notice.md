@@ -1,10 +1,12 @@
 ---
 title: "Post: Notice"
 categories:
-  - Post Formats
+  - Manual
 tags:
   - Post Formats
   - notice
+comments: false
+hidden: true
 ---
 
 A notice displays information that explains nearby content. Often used to call attention to a particular detail.

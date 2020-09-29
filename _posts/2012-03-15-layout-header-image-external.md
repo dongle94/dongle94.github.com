@@ -3,8 +3,7 @@ title: "Layout: Header Image (linked & image file)"
 header:
   image: https://live.staticflickr.com/8084/8396909762_813a2b1829_h.jpg
 categories:
-  - Layout
-  - Uncategorized
+  - Manual
 tags:
   - edge case
   - featured image
@@ -13,6 +12,8 @@ tags:
   - sample post
   - readability
   - test
+comments: false
+hidden: true
 ---
 
 This post should display a **header image**, if the theme supports it.
