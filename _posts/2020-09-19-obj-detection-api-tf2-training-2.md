@@ -2,7 +2,7 @@
 title: "[TensorFlow 2] Object Detection API training 2"
 date: 2020-09-19
 categories:
-  - TensorFlow2
+  - TensorFlow
 tags:
   - TensorFlow
   - TensorFlow 2
