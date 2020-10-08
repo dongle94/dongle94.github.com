@@ -31,7 +31,7 @@ image Link type.
 ```
 <br>
 
-캡션 달린 이미지도 생성 가능합니다. 장고 템플릿 태그 생성 후 html mark up 이용합니다.
+캡션 달린 이미지도 생성 가능합니다. Django 템플릿 태그 생성 후 html `figure` 태그를 이용합니다.
 {% capture fig_img %}
 ![Foo]({{ "/assets/images/unsplash-gallery-image-3.jpg" | relative_url }})
 {% endcapture %}

@@ -15,7 +15,7 @@ tags:
   - modify date
   - Post Formats
   - notice
-published: false
+published: true
 ---
 기존 Jekyll `minimal mistakes` 테마의 Docs로 있던 포스트들을 어느정도 병합 및 수정해서 정리하였다.
 
@@ -23,3 +23,10 @@ published: false
 내 나름대로 바로 삭제하지 않고 웹 상에서 적용되는 방식들을 확인하기 위해 아래와 같이 정리한다.
 
 - [중첩 및 혼합 리스트 사용, 체크박스](https://dongle94.github.io/manual/edge-case-nested-and-mixed-lists/)
+- [Post: Notice](https://dongle94.github.io/manual/post-notice/)
+- sample
+- sample
+- sample
+- sample
+- sample
+
