@@ -20,8 +20,10 @@ comments: false
 hidden: true
 ---
 
+### **Overlay Header Image**
 이 포스팅은 오버레이 헤더이미지, 티저 이미지, 오픈그래프 이미지를 가지고 있다. 적용 시 아래와 같은 이미지로 헤더가 보인다. 
->```yaml
+>
+```yaml
 header:
   overlay_image: /assets/images/manual_image/unsplash-image-1.jpg 
   og_image: /assets/images/page-header-og-image.png    
@@ -32,23 +34,28 @@ header:
 ```
 ![](/assets/images/manual_image/manual_capture/header_overlay_image.jpg)
 
-
+### **Header Image**
 제목 텍스트를 헤더이미지에 오버레이 시키지 않은 채 헤더 이미지만 주려면 아래와 같이 헤더를 작성한다. 
->```yaml
+>
+```yaml
 header:
   image: /assets/images/page-header-image.png        # 헤더 이미지 파일
 ```
 ![](/assets/images/manual_image/manual_capture/only_header_image.jpg)
 
+### **Teaser Image**
 하단부 추천 게시글에 미리보기 이미지로 나오는 것이 **Teaser Image**이다. 티저 이미지는 같은 header에 아래 내용을 추가함으로써 적용할 수 있다.
->```yaml
+>
+```yaml
 header:
   teaser: /assets/images/page-header-teaser.png  # 티저 이미지 파일
 ```
 ![](/assets/images/manual_image/manual_capture/teaser_image.jpg)
 
+### **OpenGraph Image**
 오픈그래프 이미지는 다음과 같이 헤더를 작성하며 링크 미리보기 혹은 링크를 클릭하기 전에 보여질 수 있는 이미지를 담당한다.
->```yaml
+>
+```yaml
 header:
   og_image: /assests/image/opengraph_image.png
 ```
