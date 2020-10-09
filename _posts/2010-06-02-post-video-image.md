@@ -41,7 +41,7 @@ hidden: true
 
 ```html
 {% raw %}{% capture fig_img %}
-![Foo]({{ "/assets/images/unsplash-gallery-image-3.jpg" | relative_url }})
+![Foo]({{ "/assets/images/manual_image/unsplash-gallery-image-3.jpg" | relative_url }})
 {% endcapture %}{% endraw %}
 
 <figure>
