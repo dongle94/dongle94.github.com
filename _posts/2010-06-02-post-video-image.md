@@ -31,7 +31,7 @@ hidden: true
 
 캡션 달린 이미지도 생성가능하다. 캡션이 달리면 이미지 하단에 설명 및 자막을 달 수 있다. **Liquid**의 `capture`기능을 이용하여 이미지 링크 생성 후 **Markup** `figure` 태그를 이용합니다.
 {% capture fig_img %}
-![Foo]({{ "/assets/images/unsplash-gallery-image-3.jpg" | relative_url }})
+![Foo]({{ "/assets/images/manual_image/unsplash-gallery-image-3.jpg" | relative_url }})
 {% endcapture %}
 
 <figure>
