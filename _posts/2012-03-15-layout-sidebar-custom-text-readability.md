@@ -18,6 +18,9 @@ tags:
   - sample post
   - readability
   - test
+header:
+  overlay_color: "#555"
+  caption: "Manual Docunment"
 comments: false
 hidden: true
 ---

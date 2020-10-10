@@ -7,6 +7,9 @@ tags:
   - Post Formats
   - tiled
 comments: false
+header:
+  overlay_color: "#555"
+  caption: "Manual Docunment"
 hidden: true
 gallery:
   - url: /assets/images/manual_image/unsplash-gallery-image-1.jpg

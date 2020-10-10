@@ -8,6 +8,9 @@ tags:
   - title
   - Markup
   - Markdown
+header:
+  overlay_color: "#555"
+  caption: "Manual Docunment"
 comments: false
 hidden: true
 ---

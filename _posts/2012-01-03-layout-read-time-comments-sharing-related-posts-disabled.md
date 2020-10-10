@@ -4,6 +4,9 @@ read_time: true
 comments: false
 share: false
 related: false
+header:
+  overlay_color: "#555"
+  caption: "Manual Docunment"
 categories:
   - Manual
 tags:

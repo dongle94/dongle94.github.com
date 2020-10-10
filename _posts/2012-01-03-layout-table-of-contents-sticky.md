@@ -4,6 +4,9 @@ categories:
   - Manual
 tags:
   - table of contents
+header:
+  overlay_color: "#555"
+  caption: "Manual Docunment"
 toc: true
 toc_sticky: true
 toc_label: "Unique Title"

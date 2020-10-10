@@ -2,6 +2,8 @@
 title: "Markup: HTML Tags and Formatting"
 header:
   teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
+  overlay_color: "#555"
+  caption: "Manual Docunment"
 categories:
   - Manual
 tags:

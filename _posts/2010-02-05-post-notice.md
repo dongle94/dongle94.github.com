@@ -7,6 +7,9 @@ tags:
   - Post Formats
   - notice
 comments: false
+header:
+  overlay_color: "#555"
+  caption: "Manual Docunment"
 hidden: true
 ---
 

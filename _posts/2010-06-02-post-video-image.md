@@ -5,6 +5,9 @@ categories:
 tags:
   - image
   - Post Formats
+header:
+  overlay_color: "#555"
+  caption: "Manual Docunment"
 comments: false
 hidden: true
 ---

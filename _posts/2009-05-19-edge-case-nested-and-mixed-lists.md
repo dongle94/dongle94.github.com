@@ -10,6 +10,9 @@ tags:
   - lists
   - markup
   - modify date
+header:
+  overlay_color: "#555"
+  caption: "Manual Docunment"
 comments: false
 hidden: true
 ---
