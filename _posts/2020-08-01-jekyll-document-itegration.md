@@ -23,10 +23,21 @@ published: true
 내 나름대로 바로 삭제하지 않고 웹 상에서 적용되는 방식들을 확인하기 위해 아래와 같이 정리한다.
 
 - [중첩 및 혼합 리스트 사용, 체크박스](https://dongle94.github.io/manual/edge-case-nested-and-mixed-lists/)
-- [Post: Notice](https://dongle94.github.io/manual/post-notice/)
-- sample
-- sample
-- sample
-- sample
-- sample
+- [포스팅: Notice 기능 이용하기](https://dongle94.github.io/manual/post-notice/)
+- [포스팅: Video & Image](https://dongle94.github.io/manual/post-video-image/)
+- [포스팅: Teaser, Overlay, OpenGraph image](https://dongle94.github.io/manual/post-header-overlay-image-og-override/)
+- [포스팅: Gallery](https://dongle94.github.io/manual/post-gallery/)
+- [기능: 댓글, 추천게시글, 게시글 공유 등](https://dongle94.github.io/manual/layout-read-time-comments-sharing-related-posts-disabled/)
+- [기능: 게시글 목차, 아이콘, 문구 수정](https://dongle94.github.io/manual/layout-table-of-contents-sticky/)
+- [기능: 게시글 미리보기](https://dongle94.github.io/manual/layout-excerpt/)
+- [기능: Author Override & disalbe](https://dongle94.github.io/manual/layout-author-override/)
+- [sample]()
+- [sample]()
+- [sample]()
+- [sample]()
+- [sample]()
+- [sample]()
+- [sample]()
+- [sample]()
+- [sample]()
 
