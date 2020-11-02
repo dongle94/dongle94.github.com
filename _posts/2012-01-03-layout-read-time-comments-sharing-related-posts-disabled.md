@@ -4,6 +4,7 @@ read_time: true
 comments: false
 share: false
 related: false
+excerpt: "포스팅의 댓글, 공유 등의 부가 기능의 On/Off에 대해서 알아본다."
 header:
   overlay_color: "#555"
   caption: "Manual Docunment"
@@ -18,41 +19,39 @@ tags:
 hidden: true
 ---
 
-This post has reading time, comments, social sharing links, and related posts disabled.
+### Intro
+해당 포스팅은 블로그 포스팅을 작성하면서 부가 기능들을 On/Off 하는 것에 대한 포스팅이다. 해당 부가 기능에는 읽기 시간, 댓글, 공유 링크, 관계 된 포스트가 있다.
 
-Reading time, comments, social sharing and related post links should not appear.
+현재 이 본 포스팅의 상태는 **읽기 시간** 활성화, **댓글** 비활성화, **게시글 공유** 비활성화, **관계 된 포스팅** 비활성화 상태로 게시되어 있다.
 
-댓글 기능을 on/off조절할 수 있다. meta 정보에서 다음과 같이 작성한다.  
-기본값은 `_config.yml` 에서 조정 가능하다. 현재 기본값은 `true`, 게시글은 `false`  
-기본으로 설정되어 있는 옵션이 먼저 적용되고 포스팅 meta에 들어가있는 옵션이 덮어 씌워져서 적용된다. 
+### Comments
+첫 번째로 댓글 기능을 on/off조절할 수 있다. 기본값은 `_config.yml` 에서 조정 가능하다. 게시글 별로는 포스팅의 최상단 `yaml`에서 조정 가능하다.  현재 기본값은 `true`, 게시글은 `false` 로 설정되어 있다. 적용 순서는 포스팅 `yaml`에 들어가있는 옵션이 먼저 적용되고 명시되어 있지 않다면 `_config.yml`에 있는 설정이 적용된다. 
 
 ```yaml
 comments: true
 comments: false
 ``` 
 
-
-읽기 시간 옵션을 on/off 할 수 있다. 게시글 제목 아래에 게시글을 지금까지 읽은 시간 출력 기능이다. meta 정보에서
-다음과 같이 작성한다.  
-기본값은 `_config.yml` 에서 조정 가능하다. 현재 기본값은 `false`, 게시글은 `true`  
-기본으로 설정되어 있는 옵션이 먼저 적용되고 포스팅 meta에 들어가있는 옵션이 덮어 씌워져서 적용된다. 
+### Reading Time
+다음으로 읽기 시간 옵션을 on/off 할 수 있다. 해당. 포스팅의 `yaml`에서 아래와 같이 작성한다.  기본값은 `_config.yml` 에서 조정 가능하다. 현재 기본값은 `false`, 게시글은 `true` 로 적용되어 있다. 적용 순서는 포스팅 `yaml`에 들어가있는 옵션이 먼저 적용되고 명시되어 있지 않다면 `_config.yml`에 있는 설정이 적용된다. 
 
 ```yaml
 read_time: true
 read_time: false
 ```
 
-관련 게시글 옵션을 on/off 할 수 있다. 포스트 하단에 게시글 추천을 끄고 켤 수 있다. meta 정보에서 다음과 같이 작성한다.
-기본값은 `_config.yml` 에서 조정 가능하다. 현재 기본값은 `true`, 게시글은 `false`  
-기본으로 설정되어 있는 옵션이 먼저 적용되고 포스팅 meta에 들어가있는 옵션이 덮어 씌워져서 적용된다. 
+### Relative Post
+다음으로는 관련 게시글 옵션을 on/off 할 수 있다. 포스트 하단부에 게시글 추천 항목을이 보이는 부분에 대한 것이다.포스팅의 `yaml`에서 아래와 같이 작성한다.
+기본값은 `_config.yml` 에서 조정 가능하다. 현재 기본값은 `true`, 게시글은 `false` 로 설정 되어 있다. 적용 순서는 포스팅 `yaml`에 들어가있는 옵션이 먼저 적용되고 명시되어 있지 않다면 `_config.yml`에 있는 설정이 적용된다. 
+
 ```yaml
 related: true
 related: false
 ```
 
-게시글 공 옵션을 on/off 할 수 있다. meta 정보에서 다음과 같이 작성한다.
-기본값은 `_config.yml` 에서 조정 가능하다. 현재 기본값은 `true`, 게시글은 `false`  
-기본으로 설정되어 있는 옵션이 먼저 적용되고 포스팅 meta에 들어가있는 옵션이 덮어 씌워져서 적용된다. 
+### Sharing
+마지막으로 게시글 공유 옵션을 on/off 할 수 있다. 해당 포스팅을 페이스북. 트위터 등의 SNS로 공유하는 옵션에 대한 것이다. 포스팅의 `yaml`에서 아래와 같이 작성한다. 기본값은 `_config.yml` 에서 조정 가능하다. 현재 기본값은 `true`, 게시글은 `false` 로 설정 되어 있다.적용 순서는 포스팅 `yaml`에 들어가있는 옵션이 먼저 적용되고 명시되어 있지 않다면 `_config.yml`에 있는 설정이 적용된다. 
+
 ```yaml
 share: true
 share: false
