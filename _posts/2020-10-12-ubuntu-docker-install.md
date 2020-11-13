@@ -35,7 +35,7 @@ $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 $ sudo add-apt-repository \
   "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 $ sudo apt update
-$ sudo apt docker-ce
+$ sudo apt install docker-ce
 ```
 - docker는 CE(Community Edition)과 EE(Enterprise Edition)으로 나뉜다. EE는 유료로 제공되는 기업용 솔루션이다.
   CE는 기술지원 및 서비스 단계 시 각종 지원이 없다. 개인 공부 및 개발 환경 사용이라면 CE를 설치하여 무료버전을 사용한다. 
