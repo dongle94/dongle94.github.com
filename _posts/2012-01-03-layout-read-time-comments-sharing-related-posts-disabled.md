@@ -18,9 +18,9 @@ tags:
 hidden: true
 ---
 
-This post has reading time, comments, social sharing links, and related posts disabled.
+본 게시글은 읽기 시간, 댓글, 공유링크, 관련된 게시글 기능을 이용할 수 없다.
 
-Reading time, comments, social sharing and related post links should not appear.
+읽기 시간, 댓글, SNS 공유, 관련 포스트 링크기능이 존재하지 않는다.
 
 댓글 기능을 on/off조절할 수 있다. meta 정보에서 다음과 같이 작성한다.  
 기본값은 `_config.yml` 에서 조정 가능하다. 현재 기본값은 `true`, 게시글은 `false`  
