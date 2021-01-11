@@ -15,7 +15,8 @@ comments: false
 hidden: true
 ---
 
-"Stick" table of contents to the top of a page by adding `toc_sticky: true` to its YAML Front Matter.
+toc(table of contents)는 말 그대로 게시글 목차기능을 의미한다 .`toc: true`를 YAML 헤더에 선언해줌으로써 사용가능하다. `toc_sticky: true` 설정을
+통해서 스크롤을 이동하여도 페이지 상단에 toc를 고정할 수 있다. 또한 `toc_label`, `toc_icon`을 통해 목차의 제목부분을 설정 가능하다.
 
 ```yaml
 ---
