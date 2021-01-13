@@ -1,6 +1,6 @@
 ---
 title: "[Docker] Docker 주요 명령어 정리"
-date: 2020-10-17
+date: 2020-10-27
 excerpt: "CLI에서 활용할 수 있는 Docker의 주요 커맨드 사용법을 알아본다."
 categories:
   - Docker
