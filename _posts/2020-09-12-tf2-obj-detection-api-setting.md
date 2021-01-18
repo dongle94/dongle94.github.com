@@ -24,9 +24,8 @@ published: true
 ---
 TensorFlow 2 MODEL API를 통한 Model Zoo Detection Model Training 방법을 다룬다.
 순서는 다음과 같다.  
-1. TensorFlow model API 설치
+1. **TensorFlow model API 설치**
 2. 데이터셋 준비  
-    2.1. 원하는 네트워크 모델 다운로드.
 3. Training 진행
 4. Evaluation 진행
 
@@ -57,7 +56,7 @@ tensorflow
 
 ## Protobuf Compile
 이어서 `research` 디렉토리에서 관련 파이썬 패키지들을 설치해준다. 만약 `protoc` 커맨드가 없다고 결과가 출력된다면 `protobuf`를 설치해줘야한다.
-```
+```shell
 sudo apt install protobuf-compiler
 ```
 아래 명령어들을 통해 Object Detection API에 필요한 파이썬 패키지들을 컴파일해주자.
@@ -75,7 +74,7 @@ $ python -m pip install .
 
 ## Object Detection API Install
 위의 명령어를 실행하면 일단 `pip list`를 했을 때 `object_detection` 등의 라이브러리가 설치되어있다. 
-```
+```shell
 $ pip list
 
 >>
