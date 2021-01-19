@@ -102,6 +102,25 @@ $ pip uninstall tensorflow
 $ pip install tensorflow-gpu==2.4.0
 ```
 
+## PYTHONPATH 환경변수 설정
+후에 `models/research/object_detection` 경로에 있는 `model_main_tf2.py` 코드를 통해 네트워크 모델을 학습 할 텐데 `PYTHONPATH`를 지정하지 않으면
+파이썬 설치 환경에 있는 `object-detection` 라이브러리 경로의 파이썬 파일들이 사용된다. 코드의 수정을 할 경우가 있다면 용이한 적용을 위해 환경변수를
+지정해주어 내려받은 브랜치 코드들로 학습을 진행할 수 있다.
+```shell
+# from /tensorflow/models/research/
+export PYTHONPATH=`pwd`:`pwd`/slim
+```
+매번 학습 전 마다 `PYTHONPATH`를 export 해주는 것이 번거롭다면 `bashrc` 파일이나 아나콘다의 환경 activate 설정 스크립트에 추가해도된다. `vi`로
+`~/.bashrc` 를 열어 다음과 같이 추가해준다.\
+```shell
+export PYTHONPATH=$PYTHONPATH:/tensorflow/models/research:/tensorflow/models/research/slim
+```
+저장하고 나왔다면 설정을 적용해준다.
+```shell
+$ source ~/.bashrc
+```
+
+
 ## Installation Check
 제대로 설치 되었는지 확인하려면 `models/research/object_detection` 디렉토리 안에 있는 빌더 테스트 모듈을 통해 할 수 있다.
 ```shell
