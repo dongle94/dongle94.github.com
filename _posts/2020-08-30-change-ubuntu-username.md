@@ -31,8 +31,8 @@ toc_icon: "smile"
   $ sudo adduser tmpuser  
   $ sudo adduser tmpuser sudo
   ```
-`tmpuser`의 계정 정보를 입력하는 칸에서는 `enter`를 눌러 기본값으로 설정해준다. `Y`를 입력하여 계정을 만들어주고 수퍼유저 권한 설정까지 마쳐준다. 결과는 아래 이미지와 같다.
-  ![](/assets/images/change_ubuntu_username/image00.png/){: width="80%" }  
+`tmpuser`의 계정 정보를 입력하는 칸에서는 `enter`를 눌러 기본값으로 설정해준다. `Y`를 입력하여 계정을 만들어주고 수퍼유저 권한 설정까지 마쳐준다. 결과는 아래 이미지와 같다.  
+![](/assets/images/change_ubuntu_username/image00.png/){: width="80%"}  
 로그 아웃 후에 다시 `tmpuser` 계정으로 로그인한다. 
 
 ## root 계정으로 변경 후 사용자 이름 변경
