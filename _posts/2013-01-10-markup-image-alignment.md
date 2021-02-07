@@ -1,7 +1,7 @@
 ---
 title: "Markup: Image Alignment"
 categories:
-  - Manual
+  - Jekyll
 tags:
   - alignment
   - captions

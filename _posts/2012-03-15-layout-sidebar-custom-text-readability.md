@@ -13,7 +13,7 @@ sidebar:
     text: "More text here."
     nav: sidebar-sample
 categories:
-  - Manual
+  - Jekyll
 tags: 
   - sample post
   - readability

@@ -5,7 +5,7 @@ header:
   overlay_color: "#555"
   caption: "Manual Docunment"
 categories:
-  - Manual
+  - Jekyll
 tags:
   - content
   - css

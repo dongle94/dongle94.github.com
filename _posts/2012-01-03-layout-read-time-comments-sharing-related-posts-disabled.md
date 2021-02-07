@@ -9,7 +9,7 @@ header:
   overlay_color: "#555"
   caption: "Manual Docunment"
 categories:
-  - Manual
+  - Jekyll
 tags:
   - related posts
   - social

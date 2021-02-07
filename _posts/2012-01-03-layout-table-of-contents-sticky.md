@@ -1,7 +1,7 @@
 ---
 title: "Layout: Post with Sticky Table of Contents, Control icon & label"
 categories:
-  - Manual
+  - Jekyll
 tags:
   - table of contents
 header:

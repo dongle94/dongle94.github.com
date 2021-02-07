@@ -1,7 +1,7 @@
 ---
 title: "Post: Video (YouTube) / Image (with Link, Caption)"
 categories:
-  - Manual
+  - Jekyll
 tags:
   - image
   - Post Formats

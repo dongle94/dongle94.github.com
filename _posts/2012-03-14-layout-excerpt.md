@@ -2,7 +2,7 @@
 title: "Layout: Excerpt (Separator, Script)"
 excerpt_separator: "<!--more-->"
 categories:
-  - Manual
+  - Jekyll
 tags:
   - content
   - excerpt

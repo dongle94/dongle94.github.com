@@ -2,7 +2,7 @@
 title: "Post: Notice"
 last_modified_at: 2020-10-05
 categories:
-  - Manual
+  - Jekyll
 tags:
   - Post Formats
   - notice

@@ -10,7 +10,7 @@ header:
       url: "https://unsplash.com"
 excerpt: "This post has a header image with an OpenGraph override."
 categories:
-  - Manual
+  - Jekyll
 tags:
   - edge case
   - image

@@ -4,7 +4,7 @@ author: Billy Rick
 excerpt: "A post to test author overrides using a data file and disabled profile"
 last_modified_at: 2018-09-10T12:32:27-04:00
 categories:
-  - Manual
+  - Jekyll
 tag:
   - excerpt
 header:

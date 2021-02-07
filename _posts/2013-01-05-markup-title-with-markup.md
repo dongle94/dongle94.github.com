@@ -1,7 +1,7 @@
 ---
 title: "Markup: Title *with* **Markdown**, Alignment"
 categories:
-  - Manual
+  - Jekyll
 tags:
   - css
   - html

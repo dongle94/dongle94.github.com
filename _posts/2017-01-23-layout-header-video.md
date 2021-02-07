@@ -5,7 +5,7 @@ header:
     id: XsxDH4HcOWA
     provider: youtube
 categories:
-  - Manual
+  - Jekyll
 tags:
   - video
   - layout

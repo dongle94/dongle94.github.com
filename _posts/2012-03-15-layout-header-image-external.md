@@ -3,7 +3,7 @@ title: "Layout: Header Image (linked & image file)"
 header:
   image: https://live.staticflickr.com/8084/8396909762_813a2b1829_h.jpg
 categories:
-  - Manual
+  - Jekyll
 tags:
   - edge case
   - featured image

@@ -8,7 +8,7 @@ header:
     - label: "Learn more"
       url: "https://unsplash.com"
 categories:
-  - Manual
+  - Jekyll
 tags:
   - edge case
   - image

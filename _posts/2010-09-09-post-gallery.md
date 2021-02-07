@@ -1,7 +1,7 @@
 ---
 title: "Post: Gallery"
 categories:
-  - Manual
+  - Jekyll
 tags:
   - gallery
   - Post Formats

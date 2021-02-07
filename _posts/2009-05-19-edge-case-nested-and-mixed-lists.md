@@ -2,7 +2,7 @@
 title: "Edge Case: Nested and Mixed Lists"
 last_modified_at: 2020-10-05
 categories:
-  - Manual
+  - Jekyll
 tags:
   - content
   - css
