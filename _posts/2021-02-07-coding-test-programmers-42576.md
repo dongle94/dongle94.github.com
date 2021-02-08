@@ -23,6 +23,7 @@ published: true
 classes: wide
 ---
 ## 문제
+문제링크: [완주하지 못한 선수](https://programmers.co.kr/learn/courses/30/lessons/42576)
 ![](/assets/images/coding-test/42576/problem.png){: width="100%" }
 
 - INPUT: 리스트 형식의 마라톤 참여 선수 이름들(`participant`), 리스트 형식의 마라톤 완주 선수 이름들(`completion`)
