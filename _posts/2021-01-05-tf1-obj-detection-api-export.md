@@ -11,8 +11,8 @@ tags:
   - Export
   - TF API
 header:
-  teaser: /assets/images/logo/tensorflow_1.png
-  overlay_image: /assets/images/logo/tensorflow_1_wide.png
+  teaser: /assets/images/logo/tensorflow-logo.png
+  overlay_image: /assets/images/logo/tensorflow-logo-wide.png
   og_image: /assets/images/profile.png
 toc: true
 toc_sticky: true

@@ -13,8 +13,8 @@ tags:
   - Training
   - TF API
 header:
-  teaser: /assets/images/logo/tensorflow_2.png
-  overlay_image: /assets/images/logo/tensorflow_2_wide.png
+  teaser: /assets/images/logo/tensorflow-logo.png
+  overlay_image: /assets/images/logo/tensorflow-logo-wide.png
   og_image: /assets/images/profile.png
 toc: true
 toc_sticky: true

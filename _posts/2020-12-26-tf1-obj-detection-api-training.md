@@ -1,7 +1,7 @@
 ---
-title: "[TensorFlow 1] Object Detection API Install"
-date: 2021-01-05
-excerpt: "TF 1 Object Detection API 학습 환경 셋팅"
+title: "[TensorFlow 1] Object Detection API Training"
+date: 2020-12-26
+excerpt: "TF 1 Object Detection API 모델 학습"
 categories:
   - TensorFlow
 tags:
@@ -10,10 +10,10 @@ tags:
   - Object Detection
   - Export
   - TF API
-  - Install
+  - Training
 header:
-  teaser: /assets/images/logo/tensorflow_1.png
-  overlay_image: /assets/images/logo/tensorflow_1_wide.png
+  teaser: /assets/images/logo/tensorflow-logo.png
+  overlay_image: /assets/images/logo/tensorflow-logo-wide.png
   og_image: /assets/images/profile.png
 toc: true
 toc_sticky: true
