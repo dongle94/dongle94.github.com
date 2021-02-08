@@ -3,11 +3,12 @@ title: "[Ubuntu] Ubuntu에 Docker 설치하기"
 date: 2020-10-12
 excerpt: "우분투에서 도커(Docker) 설치하는 방법을 알아본다."
 categories:
-  - Ubuntu
+  - Docker
 tags:
   - Ubuntu
   - Docekr
   - Linux
+  - Install
 header:
   teaser: /assets/images/logo/docker-logo.png
   overlay_image: /assets/images/logo/docker-logo-wide.png
