@@ -1,5 +1,5 @@
 ---
-title: "[Ubuntu] Ubuntu에 Docker 설치하기"
+title: "[Docker] Ubuntu에 Docker 설치하기"
 date: 2020-10-12
 excerpt: "우분투에서 도커(Docker) 설치하는 방법을 알아본다."
 categories:
