@@ -14,7 +14,7 @@ tags:
 header:
   #teaser: /assets/images/logo/tensorflow_1.png
   #overlay_image: /assets/images/logo/tensorflow_1_wide.png
-  #og_image: /assets/images/profile.png
+  og_image: /assets/images/profile.png
 toc: true
 toc_sticky: true
 toc_label: "On this page"
@@ -74,3 +74,5 @@ def solution(participant, completion):
 ![](/assets/images/coding-test/42576/try2.png){: width="60%" }  
 
 정렬 문에서 `O(NlogN)`의 시간복잡도로 정렬을 수행하고 `for` 문에서 `O(N)`의 시간복잡도로 일치 여부를 판단해서 최종 `O(NlogN)`의 효율성으로 통과한 듯 싶다.
+
+> 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

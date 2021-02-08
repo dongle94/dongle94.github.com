@@ -15,7 +15,7 @@ tags:
 header:
   #teaser: /assets/images/logo/tensorflow_1.png
   #overlay_image: /assets/images/logo/tensorflow_1_wide.png
-  #og_image: /assets/images/profile.png
+  og_image: /assets/images/profile.png
 toc: true
 toc_sticky: true
 toc_label: "On this page"
@@ -58,3 +58,5 @@ def solution(prices):
 ![](/assets/images/coding-test/42584/try.png){: width="60%" }  
 
 앞선 접근에서의 마지막 날의 경우는 두번째 `for`문에 걸리지 않기에 선언해준 `good_day`가 0의 값을 가진 채로 바로 `answer`에 들어간다.
+
+> 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
