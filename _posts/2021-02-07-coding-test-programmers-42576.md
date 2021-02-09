@@ -13,7 +13,7 @@ tags:
   - python
 header:
   #teaser: /assets/images/logo/tensorflow_1.png
-  #overlay_image: /assets/images/logo/tensorflow_1_wide.png
+  overlay_image: /assets/images/logo/programmers-logo-wide.png
   og_image: /assets/images/profile.png
 toc: true
 toc_sticky: true
