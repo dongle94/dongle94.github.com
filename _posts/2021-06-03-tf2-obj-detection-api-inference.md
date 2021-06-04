@@ -21,7 +21,7 @@ toc: true
 toc_sticky: true
 toc_label: "On this page"
 toc_icon: "smile"
-published: false
+published: true
 ---
 
 ## 도입
@@ -88,36 +88,92 @@ total_count = int(output['num_detections'][0])
 
 여기까지 하면 최종적으로 출력된 `boxes`, `scores`, `classes`, `total_count`는 `TF1`의 그것과 동일하게 보인다.
 
+------
+## Wrapped Graph(Frozen Graph) Inference
+`saved_model`까지 추출한 그래프 모델에서 `signatures`를 이용해 그래프 펑션을 뽑아내었고 해당 그래프를 `convert_variables_to_constant_v2()`
+함수를 이용해서 frozen 한 형상으로 만들어주었다. 해당 인스턴스는 우리가 `tf.io.write_graph` 함수를 사용해서 확장자가 `.pb` 인 파일로 만들어주었다. 
 
-## Wrapped Graph Inference
-Frozen Graph 형태의 Export는 위의 `Saved Model`을 Export하는 작업이 선행되어야한다. Frozen Graph는 Network를 구성하는 Weights를 상수화하여 고정시키고 Network Architectrue와
-Weights를 하나의 파일 안에 합쳐놓은 형상이다. 방식은 다음과 같다.
+구조는 다음과 같다
 ```
-saved model 불러오기 -> 네트워크 Inference 함수 추출 -> 고정 그래프 변환 -> 파일로 저장
+.
+├── test_image.jpg
+└── tf2_frozen_inference_graph.pb
 ```
-inference에 대한 부분은 다른 포스팅에서 다룰 것이니 변환 코드만 언급한다. 해당 내용은 세부 모듈은 스택 오버플로우나 Github issue 등에서 코드들을 모아 작성한 것이다. 텐서플로우에서 TF2에 대해 고정된 그래프 작성법을 따로 메뉴얼을 제공하지는 않는 듯 하다. 
 
-### Saved Model to Frozen Graph
+해당 모델을 가지고 추론을 수행하는 방식에는 wrapped 된 그래프 모델을 `tf.compat.v1` 라이브러리를 일부 이용해서 동결된 그래프를 
+`v1.wrap_function`를 사용해 `concrete_function`으로 변환한다. 이 방식은 `tf1`의 frozen_graph에도 일단은 적용이 가능하다.
+
+단, 좀 까다로운 점은 input과 output 노드 이름을 정확히 알아야한다. 여기가 많이 까다롭다. 전 포스팅에서 `frozen_func` 인스턴스를 가지고
+아래 코드를 돌린다. 혹은 기존 saved model을 로드한 `model` 인스턴스로 확인해서 output 노드의 이름을 찾아낸다. 
 ```python
-from tensorflow.python.framework.convert_to_constants import convert_variables_to_constants_v2
-
-dirname = './tf2_frozen_graph_dir/'
-filename = 'tf2_frozen_inference_graph.pb'
-
-model = tf.saved_model.load(saved_input_dir)
-graph_func = model.signatures['serving_default']
-frozen_func = convert_variables_to_constants_v2(graph_func)
-frozen_func.graph.as_graph_def()
-
-tf.io.write_graph(graph_or_graph_def=frozen_func.graph,
-                  logdir=dirname,
-                  name=filename,
-                  as_text=True)
+print(frozen_func.outputs)
+print(model.signatures['serving_default'].outputs)
 ```
-1. 우선 `saved model` 저장 후 `tf.saved_model.load()`를 이용하여 모델을 불러온다.
-2. 네트워크 모델의 시그니쳐 키를 이용하여 그래프 함수를 추출한다.
-3. `convert_variables_to_constants_v2` 모듈을 이용해서 고정된 그래프로 변환한다. 
-4. graph를 graph_def로 변환 및 `tf.io.write_graph()`를 통해서 frozen graph를 저장한다. 
-5. `tf.io.write_graph()` 메소드 파라미터 중 `logdir`엔 Output이 저장될 경로의 디렉토리를 `name`에는 파일 명을 적어준다. 
 
-여기서 유의할 점은 모델의 시그니쳐 키인 `serving_default`는 기본값이다. 네트워크 모델을 학습 시에 모델의 시그니쳐 키를 수정하거나 변경했다면해당 값을 찾아서 넣어주어야 한다. 또한 이렇게 생성된 `pb` 파일은 inference 시에 input과 output 레이어 명을 파라미터로 wrapping 함수를 적용해주어야 한다. Inference 관련 포스팅에서 자세한 설명을 이어간다.
+어느정도 삽질을 한 끝에 아래와 같이 output들이 매칭된다는 것을 알아내었다.
+```python
+'Identity_1:0' - detection_boxes   
+'Identity_2:0' - detection_classes
+'Identity_4:0' - detection_scores  
+'Identity_5:0' - num_detections
+```
+코드를 돌려서 일단은 
+### Code
+
+1. Import Library
+```python
+import numpy as np
+import tensorflow as tf
+import skimage.io
+```
+
+2. unwrapp function 정의
+```python
+def wrap_frozen_graph(graph_def, inputs, outputs):
+    def _imports_graph_def():
+        tf.compat.v1.import_graph_def(graph_def, name="")
+
+    wrapped_import = tf.compat.v1.wrap_function(_imports_graph_def, [])
+    import_graph = wrapped_import.graph
+
+    return wrapped_import.prune(
+        tf.nest.map_structure(import_graph.as_graph_element, inputs),
+        tf.nest.map_structure(import_graph.as_graph_element, outputs))
+```
+ 
+3. Model Load
+```python
+with tf.io.gfile.GFile(args.input_graph, "rb") as f:
+    graph_def = tf.compat.v1.GraphDef()
+    loaded = graph_def.ParseFromString(f.read())
+
+frozen_func = wrap_frozen_graph(graph_def=graph_def,
+                                inputs=["input_tensor:0"],
+                                outputs=["Identity_1:0", "Identity_2:0",
+                                         "Identity_4:0", "Identity_5:0"])
+```
+
+4. Input load & inference
+```python
+image = skimage.io.imread(args.image_file, as_gray=False)
+image_np_expanded = np.expand_dims(image, axis=0)
+
+if args.input_type == "uint":
+    input_type = tf.uint8
+elif args.input_type == "float":
+    input_type = tf.float32
+output = frozen_func(tf.convert_to_tensor(image_np_expanded, dtype=input_type))
+```
+`saved model` 을 추출할 때 input의 데이터 타입을 정해준 것에 따라 `frozen_func`에 들어가는 텐서의 데이터타입을 맞춰줘야한다
+
+5. Post Processing
+```python
+boxes = np.squeeze(output[0])
+classes = np.squeeze(output[1])
+scores = np.squeeze(output[2])
+total_count = int(output[3])
+```
+
+어느정도 중간에 삽질 및 어려움을 겪을 구간이 보이지만 한번 잘 설정해놓으면 코드의 효율적 재사용을 할 수 있도록 할 수 있다.
+
+> 참고, [텐서플로 TF1에서 TF2로 이전 도큐먼트](https://www.tensorflow.org/guide/migrate?hl=ko#graphpb_%EB%98%90%EB%8A%94_graphpbtxt)
